@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>SkyGuard | Weather anomaly detection</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="shell">
+    <header><div class="brand"><span class="logo">✦</span><div><h1>SkyGuard</h1><p>Automated weather station intelligence</p></div></div><span class="status"><i></i> System ready</span></header>
+    <section class="hero"><div><p class="eyebrow">ANOMALY MONITORING</p><h2>See unusual weather readings<br><em>before they become a problem.</em></h2><p class="lead">Upload station data and SkyGuard will flag readings that differ significantly from the normal pattern.</p></div><div class="orb">☁<span>◉</span></div></section>
+    <section class="grid"><article class="card upload"><h3>Analyze a CSV file</h3><p>Use columns: <code>temperature, humidity, pressure, wind_speed</code></p><label class="drop" for="file"><strong>↑</strong><span id="file-label">Choose a CSV file or drag it here</span><small>UTF-8 CSV files only</small></label><input id="file" type="file" accept=".csv,text/csv"><button id="analyze">Analyze readings</button><p id="message" class="message"></p></article><article class="card"><div class="card-title"><h3>Analysis overview</h3><span id="badge">Waiting</span></div><div class="metrics"><div><b id="total">—</b><small>Total readings</small></div><div class="danger"><b id="anomalies">—</b><small>Anomalies</small></div><div class="safe"><b id="normal">—</b><small>Normal</small></div></div><div class="bar"><span id="bar"></span></div><div id="empty" class="empty">Upload data to see results here.</div><table id="table" hidden><thead><tr><th>Row</th><th>Status</th><th>Score</th><th>Temperature</th></tr></thead><tbody></tbody></table></article></section>
+    <footer>SkyGuard • Transparent, explainable weather monitoring</footer>
+  </main><script src="app.js"></script>
+</body></html>
